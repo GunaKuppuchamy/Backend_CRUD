@@ -17,9 +17,9 @@ exports.postExpenses = async (req, res) => {
 //To edit
 exports.editExpenses = async (req, res) => {
     const id = req.params.id;
-    console.log(req.body);
+    // console.log(req.body);
     Expensers.findByIdAndUpdate(id, req.body).then(() => console.log("")).catch((err) => console.log(err));
-    const expense = await Expensers.find()
+    const expense = await Expensers.find();
     res.json(expense);
     
     // const id = req.params.id;
@@ -32,9 +32,10 @@ exports.editExpenses = async (req, res) => {
 //To delete
 exports.deleteExpenses = async (req, res) => {
     const id = req.params.id;
-    Expensers.findByIdAndDelete(id).then(() => console.log("")).catch((err) => console.log(err));    
-    return res.json("success");
+    Expensers.findByIdAndDelete(id).then(() => console.log("")).catch((err) => console.log(err));
+    // Expense.find({}).then((data) => res.json(data)).catch((err) => console.log(err));
     
+    return res.json("success");
     // const id = req.params.id;
     // Expensers.findByIdAndDelete(id)
     //     .then(() => res.json("Deleted successfully"))

@@ -9,10 +9,10 @@ router.get("/ad",controller.getDetails)
 router.post("/add",controller.postExpenses)
 
 //to put
-router.put(":/id",controller.editExpenses);
+router.put("/:id",controller.editExpenses);
 
 //to delete
-// router.delete("")
+router.delete('/:id',controller.deleteExpenses);
 
 
 

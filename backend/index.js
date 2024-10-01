@@ -8,7 +8,7 @@ mongoose.connect(url).then(()=>{
     console.log("connected");
     app.use(cors())
     app.use(express.json())
-    app.listen(3001,()=>{
+    app.listen(3002,()=>{
         console.log("Success");
         app.use("/",routes)
     })
