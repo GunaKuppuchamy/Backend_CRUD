@@ -1,10 +1,13 @@
 const Expensers = require("../models/Expense");
 
+
 //To get
 exports.getDetails = async (req, res) => {
     const expense = await Expensers.find()
     res.json(expense);
 }
+
+
 
 //To add
 exports.postExpenses = async (req, res) => {
