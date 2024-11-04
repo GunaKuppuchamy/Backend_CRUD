@@ -12,7 +12,8 @@ exports.getDetails = async (req, res) => {
 //To add
 exports.postExpenses = async (req, res) => {
     const { date, category, amount } = req.body;
-    const newItem = new Expensers({ date: new Date().toLocaleString(), category, amount });
+    const dates=new Date().toLocaleDateString;
+    const newItem = new Expensers({ date: dates, category, amount });
     newItem.save();
     res.status(200).json(newItem);
 }
